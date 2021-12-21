@@ -1,0 +1,519 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WesleyCh3n</title><link>https://wesleych3n.github.io/posts/</link><description>Recent content in Posts on WesleyCh3n</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sat, 18 Dec 2021 09:25:45 +0800</lastBuildDate><atom:link href="https://wesleych3n.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Post</title><link>https://wesleych3n.github.io/posts/my-first-post/</link><pubDate>Sat, 18 Dec 2021 09:25:45 +0800</pubDate><guid>https://wesleych3n.github.io/posts/my-first-post/</guid><description>Hello world!!</description><content type="html">&lt;p>Hello world!!&lt;/p></content></item><item><title>WSL Matplotlib Plot GUI</title><link>https://wesleych3n.github.io/posts/2021-10-19-wsl-matplotlib/</link><pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-19-wsl-matplotlib/</guid><description>TL;DR
+Install VcXsrv.
+Install PyQT
+Add following to shellrc
+export DISPLAY=`grep -oP &amp;#34;(?&amp;lt;=nameserver ).+&amp;#34; /etc/resolv.conf`:0.0 Open win firewall by: Windows Security -&amp;gt; Firewall &amp;amp; network protection -&amp;gt; Allow an app through firewall -&amp;gt; make sure VcXsrv has both public and private checked. (When Launching xlaunch first time, you might get a prompt to allow through firewall.
+Launch XLaunch with &amp;ldquo;Disable access control&amp;rdquo; ticked</description><content type="html"><![CDATA[<p>TL;DR</p>
+<ol>
+<li>
+<p>Install VcXsrv.</p>
+</li>
+<li>
+<p>Install PyQT</p>
+</li>
+<li>
+<p>Add following to shellrc</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export DISPLAY<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>grep -oP <span style="color:#e6db74">&#34;(?&lt;=nameserver ).+&#34;</span> /etc/resolv.conf<span style="color:#e6db74">`</span>:0.0
+</code></pre></div></li>
+<li>
+<p>Open win firewall by:
+Windows Security -&gt; Firewall &amp; network protection -&gt; Allow an app through firewall -&gt; make sure VcXsrv has both public and private checked. (When Launching xlaunch first time, you might get a prompt to allow through firewall.</p>
+</li>
+<li>
+<p>Launch XLaunch with &ldquo;Disable access control&rdquo; ticked</p>
+</li>
+</ol>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/43397162/show-matplotlib-plots-and-other-gui-in-ubuntu-wsl1-wsl2">Show matplotlib plots (and other GUI) in Ubuntu (WSL1 &amp; WSL2)</a></li>
+</ul>
+]]></content></item><item><title>npm global installed path config</title><link>https://wesleych3n.github.io/posts/2021-10-18-npm-config/</link><pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-18-npm-config/</guid><description>In order to fix Error: EACCES: permission denied, access '/usr/lib/node_modules', a solution will be set installed path non-root. Here&amp;rsquo;s how to set it.
+mkdir ~/.npm-global npm config set prefix &amp;#39;~/.npm-global&amp;#39; This can see if config set properly
+npm config list Output will be like this
+; cli configs metrics-registry = &amp;#34;https://registry.npmjs.org/&amp;#34; scope = &amp;#34;&amp;#34; user-agent = &amp;#34;npm/6.14.15 node/v14.18.1 linux x64&amp;#34; ; userconfig /home/wesley/.npmrc prefix = &amp;#34;/home/wesley/.npm-global&amp;#34; ; node bin location = /usr/local/bin/node ; cwd = /mnt/c/Users/Wesley/GitHub/wesleych3n.</description><content type="html"><![CDATA[<p>In order to fix <code>Error: EACCES: permission denied, access '/usr/lib/node_modules'</code>,
+a solution will be set installed path non-root. Here&rsquo;s how to set it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/.npm-global
+npm config set prefix <span style="color:#e6db74">&#39;~/.npm-global&#39;</span>
+</code></pre></div><p>This can see if config set properly</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm config list
+</code></pre></div><p>Output will be like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">; cli configs
+metrics-registry <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://registry.npmjs.org/&#34;</span>
+scope <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+user-agent <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;npm/6.14.15 node/v14.18.1 linux x64&#34;</span>
+
+; userconfig /home/wesley/.npmrc
+prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/home/wesley/.npm-global&#34;</span>
+
+; node bin location <span style="color:#f92672">=</span> /usr/local/bin/node
+; cwd <span style="color:#f92672">=</span> /mnt/c/Users/Wesley/GitHub/wesleych3n.github.io/_posts
+; HOME <span style="color:#f92672">=</span> /home/wesley
+; <span style="color:#e6db74">&#34;npm config ls -l&#34;</span> to show all defaults.
+</code></pre></div><p>Add bin path to $PATH variable</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -d $HOME/.npm-global <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  export PATH<span style="color:#f92672">=</span>$HOME/.npm-global/bin:$PATH
+<span style="color:#66d9ef">fi</span>
+</code></pre></div>]]></content></item><item><title>Name Export vs Default Export</title><link>https://wesleych3n.github.io/posts/2021-10-15-js-name-export-vs-default-export/</link><pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-15-js-name-export-vs-default-export/</guid><description>Name Export vs Default Export Name Export Export export const Hello = () =&amp;gt; { return &amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;; } export const Goodbye = () =&amp;gt; { return &amp;lt;h1&amp;gt;Goodbye&amp;lt;/h1&amp;gt;; } We can export multiple components from a single file.
+Import import { Hello, Goodbye } from &amp;#34;./Greetings&amp;#34; // or import * as Greetings from &amp;#34;./Greetings&amp;#34; &amp;lt;Greetings.Hello /&amp;gt; Default Export Export const Hello = () =&amp;gt; { return &amp;lt;h1&amp;gt;Hello&amp;lt;/h1&amp;gt;; } export default Hello; only export one component per file;</description><content type="html"><![CDATA[<h1 id="name-export-vs-default-export">Name Export vs Default Export</h1>
+<h2 id="name-export">Name Export</h2>
+<ul>
+<li>Export</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;;</span>
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Goodbye</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Goodbye</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;;</span>
+}
+</code></pre></div><p>We can export multiple components from a single file.</p>
+<ul>
+<li>Import</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Hello</span>, <span style="color:#a6e22e">Goodbye</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Greetings&#34;</span>
+<span style="color:#75715e">// or
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">Greetings</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Greetings&#34;</span>
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Greetings</span>.<span style="color:#a6e22e">Hello</span> <span style="color:#f92672">/&gt;</span>
+</code></pre></div><h2 id="default-export">Default Export</h2>
+<ul>
+<li>Export</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;;</span>
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Hello</span>;
+</code></pre></div><p>only export one component per file;</p>
+<p>If you want multiple functions in a file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fn1</span> <span style="color:#f92672">=</span> () =&gt; {}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fn2</span> <span style="color:#f92672">=</span> () =&gt; {}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> { <span style="color:#a6e22e">fn1</span>, <span style="color:#a6e22e">fn2</span> }
+</code></pre></div><ul>
+<li>Import</li>
+</ul>
+<p>Single functions</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./Hello&#34;</span>
+</code></pre></div><p>Multiple functions</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Fns</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./functions&#34;</span>
+
+<span style="color:#a6e22e">Fns</span>.<span style="color:#a6e22e">fn1</span>();
+<span style="color:#a6e22e">Fns</span>.<span style="color:#a6e22e">fn2</span>();
+</code></pre></div><h2 id="tldr">TL;DR</h2>
+<p><code>Default</code> is better to prevent same function name in different file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">EN</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./EnGreetings&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">TW</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./TwGreetings&#39;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">render</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#66d9ef">return</span> (
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">EN</span>.<span style="color:#a6e22e">Hello</span> <span style="color:#f92672">/&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">TW</span>.<span style="color:#a6e22e">Hello</span> <span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+  )
+}
+</code></pre></div>]]></content></item><item><title>SSH X server on Windows</title><link>https://wesleych3n.github.io/posts/2021-10-14-window-x-server/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-14-window-x-server/</guid><description>Installation Install VcXsrv scoop install vcxsrv Setup xLauncher xlaunch.exe ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-1.jpg){: .align-center} ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-2.jpg){: .align-center} ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-3.jpg){: .align-center} ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-4.jpg){: .align-center}
+Add env variable to PowerShell PROFILE # vi $PROFILE, and add below line $env:DISPLAY=&amp;#39;localhost:0.0&amp;#39; Test out and finish! ssh -Y server xclock</description><content type="html"><![CDATA[<h1 id="installation">Installation</h1>
+<h2 id="install-vcxsrv">Install VcXsrv</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">scoop install vcxsrv
+</code></pre></div><h2 id="setup-xlauncher">Setup xLauncher</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">xlaunch.exe
+</code></pre></div><p>![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-1.jpg){: .align-center}
+![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-2.jpg){: .align-center}
+![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-3.jpg){: .align-center}
+![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-4.jpg){: .align-center}</p>
+<h2 id="add-env-variable-to-powershell-profile">Add env variable to PowerShell PROFILE</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># vi $PROFILE, and add below line</span>
+$env:DISPLAY=<span style="color:#e6db74">&#39;localhost:0.0&#39;</span>
+</code></pre></div><h2 id="test-out-and-finish">Test out and finish!</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">ssh -Y server
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xclock
+</code></pre></div>]]></content></item><item><title>My Bash/Zsh-like PowerShell Journey</title><link>https://wesleych3n.github.io/posts/2021-10-14-my-powershell/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-14-my-powershell/</guid><description>TL;DR
+This is a note that I found out Microsoft PowerShell can act like Bash/Zsh which I much familiar with. Because of the work, pretty much whole operating system move to windows. It is so much pain to work without using any shell. The main reason is that I so much used to use (neo)vim as my code editor. But luckily (neo)vim built for windows (phew~). Ok, back to the title, this is a step by step note that I dig into PowerShell and Windows.</description><content type="html"><![CDATA[<p><strong>TL;DR</strong></p>
+<p>This is a note that I found out Microsoft PowerShell can act like Bash/Zsh which
+I much familiar with. Because of the work, pretty much whole operating system
+move to windows. It is so much pain to work without using any shell. The main
+reason is that I so much used to use (neo)vim as my code editor. But luckily
+(neo)vim built for windows (phew~). Ok, back to the title, this is a step by step
+note that I dig into PowerShell and Windows.</p>
+<ul>
+<li>
+<p>Create <code>$PROFILE</code> for PowerShell if not exist (like <code>.bashrc</code> or <code>.zshrc</code>)</p>
+<ol>
+<li>Test if Profile exist
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path $PROFILE
+</code></pre></div></li>
+</ol>
+<blockquote>
+<p>❗If return is false meaning there is NO profile found then jump to step 2. <!-- raw HTML omitted -->
+❗If return is true meaning there IS profile found then jump to step 3.</p>
+</blockquote>
+<ol start="2">
+<li>Create Profile
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Type File -Force $PROFILE
+</code></pre></div></li>
+</ol>
+<blockquote>
+<p>⚠ (Caution) these will erase the exist profile with new empty one.</p>
+</blockquote>
+<ol start="3">
+<li>Varify Profile path
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">echo $PROFILE
+</code></pre></div></li>
+</ol>
+<p>It normally locate in <code>~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1</code></p>
+</li>
+<li>
+<p>Install <code>oh-my-posh</code> Theme like powerlevel10k</p>
+<ol>
+<li>
+<p>Installation</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Install-Module oh-my-posh -Scope CurrentUser
+</code></pre></div></li>
+<li>
+<p>List all themes and remember the name of theme you like</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PoshThemes -list
+</code></pre></div></li>
+<li>
+<p>Add theme to Profile</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-PoshPrompt -Theme &lt;Theme name&gt;
+</code></pre></div></li>
+</ol>
+<p>Personally I use <code>honukai</code> for the simplicity.</p>
+<ol start="4">
+<li>Source the Profile or restart the Terminal to take effect.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">. $PROFILE
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>Install Autosuggestion</p>
+<ol>
+<li>
+<p>Installation</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Install-Module PSReadLine
+</code></pre></div></li>
+<li>
+<p>Add the following configurations</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># autocompletion</span>
+Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineKeyHandler -Chord Shift+Tab -Function AcceptSuggestion <span style="color:#75715e"># Accept Suggestion</span>
+
+<span style="color:#75715e"># Autocompletion for arrow keys</span>
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete <span style="color:#75715e"># Iterate through autocompletion</span>
+Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+<span style="color:#75715e"># Bash like movement</span>
+Set-PSReadlineKeyHandler -Chord ctrl+d -Function ViExit
+Set-PSReadlineKeyHandler -Chord ctrl+w -Function BackwardDeleteWord
+Set-PSReadlineKeyHandler -Chord ctrl+e -Function EndOfLine
+Set-PSReadlineKeyHandler -Chord ctrl+a -Function BeginningOfLine
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>Tab Completion <a href="https://github.com/bergmeister/posh-cli">Ref</a></p>
+</li>
+</ul>
+]]></content></item><item><title>ReactJs Learning Note</title><link>https://wesleych3n.github.io/posts/2021-10-13-reactjs/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-13-reactjs/</guid><description>React is component-based
+Create react component class. Use ReactDOM.render() refresh html
+ReactDOM.render(element, container[, callback])
+JSX component lifecycle</description><content type="html"><![CDATA[<p>React is component-based</p>
+<p>Create react component class. Use <code>ReactDOM.render()</code> refresh <code>html</code></p>
+<p><code>ReactDOM.render(element, container[, callback])</code></p>
+<ul>
+<li><code>JSX</code></li>
+<li>component lifecycle</li>
+</ul>
+]]></content></item><item><title>#2021-10-14.work.log</title><link>https://wesleych3n.github.io/posts/2021-10-12-work/</link><pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-12-work/</guid><description> Install scoop (best thing ever seen in win10 so far, maybe try chocolatey future) git, nodejs, python, neovim, neovide, lazygit maybe understood dll search order Create basic electron app Use electron-builder package electron app msvs x64 for powershell!! I think I need to start learning UI framewor&amp;hellip; want to update my log with my github.io Reference DLL search on windows dll search order electron-builder 用 electron-builder 打包應用程式給其他人 Building desktop applications with Electron - electron-builder x64 Developer PowerShell for VS 2019</description><content type="html"><![CDATA[<ul>
+<li>Install scoop (best thing ever seen in win10 so far, maybe try chocolatey future)
+<ul>
+<li>git, nodejs, python, neovim, neovide, lazygit</li>
+<li>maybe understood dll search order</li>
+<li>Create basic electron app</li>
+<li>Use <code>electron-builder</code> package electron app</li>
+<li>msvs x64 for powershell!!</li>
+<li>I think I need to start learning UI framewor&hellip;</li>
+<li><em>want to update my log with my github.io</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/2463243/dll-search-on-windows">DLL search on windows</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">dll search order</a></li>
+<li><a href="https://github.com/electron-userland/electron-builder">electron-builder</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10234399">用 electron-builder 打包應用程式給其他人</a></li>
+<li><a href="https://medium.com/@jamzi/building-desktop-applications-with-electron-electron-builder-47484193cbcc">Building desktop applications with Electron - electron-builder</a></li>
+<li><a href="https://developercommunity.visualstudio.com/t/x64-developer-powershell-for-vs-2019/943058">x64 Developer PowerShell for VS 2019</a></li>
+</ul>
+]]></content></item><item><title>JavaScript Learning Note</title><link>https://wesleych3n.github.io/posts/2021-10-13-post-js-road/</link><pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-13-post-js-road/</guid><description>JavaScript Note 5 type Undefined Null String Boolen Number Others r Object 3 way create Object Object literal var a = { name:&amp;#39;Wesley&amp;#39;, score: 100 }; new operator var a = new Date Constructor function function Student(name, score){ this.name = name this.score = score } var a = new Student(&amp;#39;Wesley&amp;#39;, 100); Primitive variable assignment makes a &amp;ldquo;copy&amp;rdquo; Object variable assignment pass the &amp;ldquo;reference&amp;rdquo; Function can be anonymous // recommended var add = function(a, b) { return a + b; }; Return a function var f = function(s) { return s?</description><content type="html"><![CDATA[<h2 id="javascript-note">JavaScript Note</h2>
+<h2 id="5-type">5 type</h2>
+<ul>
+<li>Undefined</li>
+<li>Null</li>
+<li>String</li>
+<li>Boolen</li>
+<li>Number
+Others r <code>Object</code></li>
+</ul>
+<h2 id="3-way-create-object">3 way create <code>Object</code></h2>
+<ul>
+<li>Object literal</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;Wesley&#39;</span>, <span style="color:#a6e22e">score</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span> };
+</code></pre></div><ul>
+<li>new operator</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date
+</code></pre></div><ul>
+<li>Constructor function</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Student</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">score</span>){
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">score</span>
+}
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#39;Wesley&#39;</span>, <span style="color:#ae81ff">100</span>);
+</code></pre></div><ul>
+<li>Primitive variable assignment makes a &ldquo;copy&rdquo;</li>
+<li>Object variable assignment pass the &ldquo;reference&rdquo;</li>
+<li>Function can be anonymous // recommended</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>; };
+</code></pre></div><ul>
+<li>Return a function</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">s</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span><span style="color:#f92672">?</span>
+    <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">+</span><span style="color:#a6e22e">b</span>; }<span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">-</span><span style="color:#a6e22e">b</span>; }
+};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(<span style="color:#66d9ef">true</span>); <span style="color:#a6e22e">f1</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(<span style="color:#66d9ef">false</span>); <span style="color:#a6e22e">f2</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>);
+</code></pre></div><ul>
+<li>When a function is used only once, we can
+declare it anonymously and evoke it
+immediately</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#66d9ef">function</span>() {
+... <span style="color:#a6e22e">some</span> <span style="color:#a6e22e">statements</span>
+})()
+</code></pre></div><ul>
+<li>function hoist:
+<ul>
+<li>function declaration will elevate to top
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">sum</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>); <span style="color:#75715e">// This is OK!
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>; };
+</code></pre></div></li>
+<li>expression function declaration won&rsquo;t
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">sum</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>); <span style="color:#75715e">// Error
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>; }
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="variable-scope">Variable Scope</h2>
+<ul>
+<li>
+<p>if no <code>var</code>, global variable</p>
+</li>
+<li>
+<p>if <code>var</code>, function scope.</p>
+</li>
+<li>
+<p>if same variable name use var multiple time, later ones will be assignment</p>
+</li>
+<li>
+<p><code>let</code> use block scope, can&rsquo;t re-declare in one scope, no elevate</p>
+</li>
+<li>
+<p><code>const</code> =&gt; <code>read-only</code> variable</p>
+</li>
+</ul>
+<h2 id="dom-manipulations">DOM Manipulations</h2>
+<ul>
+<li>select DOM node/element. If DOM contain:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;target&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;a-class&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><ul>
+<li>unique DOM node
+<ul>
+<li><code>document.getElementByID('target')</code></li>
+</ul>
+</li>
+<li>array of DOM node
+<ul>
+<li><code>document.getElementByClassName('a-class')</code></li>
+</ul>
+</li>
+<li>CSS selector
+<ul>
+<li><code>document.querySelector()</code>: With a querySelector statement, you can select an element based on a CSS selector. This means you can select elements by ID, class, or any other type of selector.
+<ul>
+<li><code>document.querySelector(#myid);</code>: select by ID</li>
+<li><code>document.querySelector(.myclass);</code>: select by CSS class name</li>
+<li><code>document.querySelector(&quot;p.example&quot;);</code>: Get the first <!-- raw HTML omitted --> element in the document with class=&ldquo;example&rdquo;</li>
+</ul>
+</li>
+<li><code>document.querySelectorAll()</code>: a list of the document&rsquo;s elements that match the specified group of selectors.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Browse node
+<ul>
+<li><code>parentNode.children</code></li>
+<li><code>parentNode.firstElementChild</code></li>
+<li><code>parentNode.lastElementChild</code></li>
+<li><code>parentNode.childElementCount</code></li>
+</ul>
+</li>
+<li>Add/Remove node
+<ul>
+<li><code>document.createElement(“div”);</code></li>
+<li><code>newText = document.createTextNode(“Hello!”);</code></li>
+<li><code>parentNode.appendChild(childNode);</code></li>
+<li><code>parentNode.removeChild(childNode);</code></li>
+<li><code>parentNode.removeChild(childNode);</code></li>
+<li><code>parentNode.replaceChild(newNode, oldNode)</code></li>
+</ul>
+</li>
+<li>Modify node
+<ul>
+<li><code>thisElement.style.color = “red”;</code> // Modify CSS style</li>
+<li><code>thisElement.className = “new-class1 new-class2”;</code> // Modify properties</li>
+<li><code>thisElement.classList.add(className);</code></li>
+<li><code>thisElement.classList.remove(className)</code></li>
+</ul>
+</li>
+<li><strong>Bind Event</strong>
+<ul>
+<li><code>addEventListener()</code>. eventType:
+<ul>
+<li>click</li>
+<li>focus: start to input</li>
+<li>blur: leave the input</li>
+<li>change: value change</li>
+<li>keydown</li>
+<li>keyup</li>
+<li>mouseenter</li>
+<li>mouseleave</li>
+</ul>
+</li>
+<li>e.g.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- in .html --&gt;</span>
+&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">“target&#34;</span>&gt;This is a button&lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">targetElement</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;target&#34;</span>);
+<span style="color:#a6e22e">targetElement</span>.<span style="color:#a6e22e">addEventListener</span>( <span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>() {
+   <span style="color:#75715e">// Do something you wnat
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;what do you wnat to do?&#39;</span>);
+});
+</code></pre></div></li>
+<li><code>GlobalEventHandlers()</code> <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers">Ref</a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">log</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;log&#39;</span>);
+<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">inputChange</span>;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">inputChange</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#75715e">//.. some something here
+</span><span style="color:#75715e"></span>}
+</code></pre></div></li>
+<li>As a tag attribute <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">Ref</a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#66d9ef">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myClass&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clickHandler()&#34;</span><span style="color:#f92672">&gt;</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="closer-look-at-constructor-function">Closer Look at Constructor Function</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// #1 Function call to a ref to an anonymous function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Car</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">make</span>) { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">make</span><span style="color:#f92672">=</span><span style="color:#a6e22e">make</span>; }
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Car</span>(<span style="color:#e6db74">&#34;BMW&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>); <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">make</span>); <span style="color:#75715e">// ERROR
+</span><span style="color:#75715e">// #2 Constructor call to a ref to an anonymous function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Car</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">make</span>) { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">make</span><span style="color:#f92672">=</span><span style="color:#a6e22e">make</span>; }
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Car</span>(<span style="color:#e6db74">&#34;BMW&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>); <span style="color:#75715e">// { make: &#34;BMW&#34; }
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">make</span>); <span style="color:#75715e">// &#34;BMW&#34;
+</span><span style="color:#75715e">// #3 Ref to a ref to an anonymous function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Car</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">make</span>) { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">make</span><span style="color:#f92672">=</span><span style="color:#a6e22e">make</span>; }
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Car</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>); <span style="color:#75715e">// is a function
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">make</span>); <span style="color:#75715e">// undefined
+</span><span style="color:#75715e">// #4 Constructor call to a ref to an anonymous function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Car</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">make</span>) { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">make</span><span style="color:#f92672">=</span><span style="color:#a6e22e">make</span>; }
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Car</span>; <span style="color:#75715e">// missing parameter
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>); <span style="color:#75715e">// is an object
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">make</span>); <span style="color:#75715e">// undefine
+</span><span style="color:#75715e">// #5 Create an object from another object as a prototype
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Car</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">make</span>) { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">make</span><span style="color:#f92672">=</span><span style="color:#a6e22e">make</span>; }
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Car</span>(<span style="color:#e6db74">&#34;BMW&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>); <span style="color:#75715e">// { make: &#34;BMW&#34; }
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">make</span>); <span style="color:#75715e">// &#34;BMW&#34;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myCar</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">car</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myCar</span>); <span style="color:#75715e">// { } &lt;- no own property
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myCar</span>.<span style="color:#a6e22e">make</span>);<span style="color:#75715e">// &#34;BMW&#34; &lt;- inherited property
+</span></code></pre></div><p>Each object has a <em>private property</em> which holds a link to another object called its <strong>prototype</strong>.</p>
+<ul>
+<li><code>Object.keys(obj)</code> vs. <code>for (var i in obj)</code>
+<ul>
+<li><code>Object.keys(obj)</code> returns an array with all the own (not in the prototype chain) enumerable properties’ names (“keys”) of the object obj.</li>
+<li><code>for (var i in obj)</code> traverses all enumerable properties of an object and its prototype chain.</li>
+</ul>
+</li>
+</ul>
+<h2 id="more-on-function">More on function</h2>
+<ul>
+<li>Arrow function (=&gt;): is like <code>lambda</code> in python
+<ul>
+<li>Syntax:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#a6e22e">arg1</span>, <span style="color:#a6e22e">arg2</span>) =&gt; {
+  <span style="color:#75715e">// function body
+</span><span style="color:#75715e"></span>}
+</code></pre></div><ul>
+<li>if no function body:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#a6e22e">arg1</span>, <span style="color:#a6e22e">arg2</span>) =&gt; <span style="color:#a6e22e">expression</span>
+<span style="color:#75715e">// but if expression is obj definition, () is required
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">arg</span> =&gt; ({<span style="color:#a6e22e">property</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">value</span>})
+</code></pre></div><ul>
+<li>if arg only 1</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">arg1</span> =&gt; <span style="color:#a6e22e">expression</span>
+</code></pre></div><ul>
+<li>call it on spot</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;hello world!&#34;</span>))()
+</code></pre></div></li>
+</ul>
+<h2 id="more-on-variable">More on Variable</h2>
+<p>&ldquo;const&rdquo; defines “read-only” variables.  However, the properties inside a const object are NOT constrain</p>
+<p>Iterate through an Array</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;1&#39;</span>, <span style="color:#e6db74">&#39;2&#39;</span>, <span style="color:#e6db74">&#39;3&#39;</span>]
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>)
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">array</span>(<span style="color:#a6e22e">i</span>));
+</code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">i</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>))
+</code></pre></div><h2 id="usefule-concept">Usefule concept</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>];
+<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;hello&#39;</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">arr</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// &#34;0&#34;, &#34;1&#34;, &#34;2&#34;, &#34;foo&#34;
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">arr</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// 3, 5, 7; NO &#34;hello&#34;
+</span><span style="color:#75715e"></span>}
+</code></pre></div><ul>
+<li>
+<p>The <code>in</code> operator returns true if the specified property is in the specified object</p>
+</li>
+<li>
+<p>Template literal</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">`string text </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">expression</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> string text`</span>
+</code></pre></div></li>
+<li>
+<p><code>instanceof</code></p>
+</li>
+</ul>
+]]></content></item></channel></rss>
