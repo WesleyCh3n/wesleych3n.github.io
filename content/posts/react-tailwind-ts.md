@@ -25,35 +25,32 @@ yarn add -D tailwindcss postcss autoprefixer
 # yarn add -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
 ```
 
-## Install CRACO
-<details>
-  <summary>No Need Anymore (skip)</summary>
-```bash
-yarn add @craco/craco
-```
-
-`package.json`
-```json
-"scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
-},
-```
-
-`craco.config.js`
-
-```javascript
-module.exports = {
-  style: {
-    postcss: {
-      plugins: [require("tailwindcss"), require("autoprefixer")],
-    },
-  },
-};
-```
-</details>
+## Install CRACO - No Need Anymore (skip)
+>> ```bash
+>> yarn add @craco/craco
+>> ```
+>>
+>> `package.json`
+>> ```json
+>> "scripts": {
+>>     "start": "craco start",
+>>     "build": "craco build",
+>>     "test": "craco test",
+>>     "eject": "react-scripts eject"
+>> },
+>> ```
+>>
+>> `craco.config.js`
+>>
+>> ```javascript
+>> module.exports = {
+>>   style: {
+>>     postcss: {
+>>       plugins: [require("tailwindcss"), require("autoprefixer")],
+>>     },
+>>   },
+>> };
+>> ```
 
 ## Generate `tailwind.config.js`
 
