@@ -1,4 +1,68 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WesleyCh3n</title><link>https://wesleych3n.github.io/posts/</link><description>Recent content in Posts on WesleyCh3n</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sat, 18 Dec 2021 09:25:45 +0800</lastBuildDate><atom:link href="https://wesleych3n.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Post</title><link>https://wesleych3n.github.io/posts/my-first-post/</link><pubDate>Sat, 18 Dec 2021 09:25:45 +0800</pubDate><guid>https://wesleych3n.github.io/posts/my-first-post/</guid><description>Hello world!!</description><content type="html">&lt;p>Hello world!!&lt;/p></content></item><item><title>WSL Matplotlib Plot GUI</title><link>https://wesleych3n.github.io/posts/2021-10-19-wsl-matplotlib/</link><pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-19-wsl-matplotlib/</guid><description>TL;DR
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WesleyCh3n</title><link>https://wesleych3n.github.io/posts/</link><description>Recent content in Posts on WesleyCh3n</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Wed, 22 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wesleych3n.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>React + Tailwind + Typescript</title><link>https://wesleych3n.github.io/posts/react-tailwind-ts/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/react-tailwind-ts/</guid><description>Create React Typescript Project yarn create react-app ./ --template typescript Install Tailwind in devDependency yarn add -D tailwindcss postcss autoprefixer # yarn add -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9 Install CRACO package.json
+&amp;#34;scripts&amp;#34;: { &amp;#34;start&amp;#34;: &amp;#34;craco start&amp;#34;, &amp;#34;build&amp;#34;: &amp;#34;craco build&amp;#34;, &amp;#34;test&amp;#34;: &amp;#34;craco test&amp;#34;, &amp;#34;eject&amp;#34;: &amp;#34;react-scripts eject&amp;#34; }, craco.config.js
+module.exports = { style: { postcss: { plugins: [require(&amp;#34;tailwindcss&amp;#34;), require(&amp;#34;autoprefixer&amp;#34;)], }, }, }; Generate tailwind.config.js yarn tailwindcss init tailwind.config.js
+module.exports = { purge: [&amp;#34;./src/**/*.{js,jsx,ts,tsx}&amp;#34;, &amp;#34;.</description><content type="html"><![CDATA[<h2 id="create-react-typescript-project">Create React Typescript Project</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yarn create react-app ./ --template typescript
+</code></pre></div><h2 id="install-tailwind-in-devdependency">Install Tailwind in devDependency</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yarn add -D tailwindcss postcss autoprefixer
+<span style="color:#75715e"># yarn add -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9</span>
+</code></pre></div><h2 id="install-craco">Install CRACO</h2>
+<!-- raw HTML omitted -->
+<p><code>package.json</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;craco start&#34;</span>,
+    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;craco build&#34;</span>,
+    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;craco test&#34;</span>,
+    <span style="color:#f92672">&#34;eject&#34;</span>: <span style="color:#e6db74">&#34;react-scripts eject&#34;</span>
+}<span style="color:#960050;background-color:#1e0010">,</span>
+</code></pre></div><p><code>craco.config.js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">style</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">postcss</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;tailwindcss&#34;</span>), <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;autoprefixer&#34;</span>)],
+    },
+  },
+};
+</code></pre></div><!-- raw HTML omitted -->
+<h2 id="generate-tailwindconfigjs">Generate <code>tailwind.config.js</code></h2>
+<pre tabindex="0"><code>yarn tailwindcss init
+</code></pre><p><code>tailwind.config.js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">purge</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;./src/**/*.{js,jsx,ts,tsx}&#34;</span>, <span style="color:#e6db74">&#34;./public/index.html&#34;</span>],
+  <span style="color:#a6e22e">darkMode</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#75715e">// or &#39;media&#39; or &#39;class&#39;
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">theme</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">extend</span><span style="color:#f92672">:</span> {},
+  },
+  <span style="color:#a6e22e">variants</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">extend</span><span style="color:#f92672">:</span> {},
+  },
+  <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [],
+};
+</code></pre></div><h2 id="add-tailwind">Add Tailwind</h2>
+<p><code>index.css</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">tailwind</span> <span style="color:#f92672">base</span>;
+@<span style="color:#66d9ef">tailwind</span> <span style="color:#f92672">components</span>;
+@<span style="color:#66d9ef">tailwind</span> <span style="color:#f92672">utilities</span>;
+</code></pre></div><h2 id="create-some-components">Create some components</h2>
+<p><code>GradientText.tsx</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Props</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">text</span>: <span style="color:#66d9ef">string</span>;
+};
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">GradientText</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">text</span> }<span style="color:#f92672">:</span> <span style="color:#a6e22e">Props</span>) <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p-10 min-h-screen flex items-center justify-center bg-cool-gray-700&#34;</span>&gt;
+      &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-9xl font-black text-white text-center&#34;</span>&gt;
+        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bg-gradient-to-r text-transparent bg-clip-text from-green-400 to-purple-500&#34;</span>&gt;
+          {<span style="color:#a6e22e">text</span>}
+        &lt;/<span style="color:#f92672">span</span>&gt;
+      &lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+};
+</code></pre></div><h2 id="start">Start</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yarn start
+</code></pre></div>]]></content></item><item><title>My First Post</title><link>https://wesleych3n.github.io/posts/my-first-post/</link><pubDate>Sat, 18 Dec 2021 09:25:45 +0800</pubDate><guid>https://wesleych3n.github.io/posts/my-first-post/</guid><description>Hello world!!</description><content type="html">&lt;p>Hello world!!&lt;/p></content></item><item><title>WSL Matplotlib Plot GUI</title><link>https://wesleych3n.github.io/posts/2021-10-19-wsl-matplotlib/</link><pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-19-wsl-matplotlib/</guid><description>TL;DR
 Install VcXsrv.
 Install PyQT
 Add following to shellrc
