@@ -57,7 +57,7 @@ module.exports = {
 
 ## Generate `tailwind.config.js`
 
-```
+```bash
 yarn tailwindcss init
 ```
 
@@ -111,3 +111,4 @@ export const GradientText = ({ text }: Props) => {
 ```bash
 yarn start
 ```
+
