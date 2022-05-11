@@ -71,4 +71,5 @@ paginate     = 10
     url        = "/about"
 
 [markup.goldmark.renderer]
+  hardWraps = true
   unsafe = true # Allow HTML in md files
