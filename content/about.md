@@ -7,8 +7,12 @@ author:
   name: WesleyCh3n
 ---
 
+{{ $image := resources.GetRemote "https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" }}
+{{ $image := $image.Resize "100" }}
+<img src="{{ $image.RelPermalink }}">
+
+<img src="https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" width="100"/>
 <div id="header" align="center">
-  <img src="https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" width="100"/>
   <div id="badges">
     <a href="https://www.linkedin.com/in/wesleych3n">
       <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=LinkedIn" alt="LinkedIn Badge"/>
