@@ -1,19 +1,19 @@
 +++
 title = "About"
-date = "2014-04-09"
-aliases = ["about-us","about-hugo","contact"]
+date = "2022-05-11"
+aliases = ["about-me","contact"]
 [ author ]
-  name = "Hugo Authors"
+  name = "WesleyCh3n"
 +++
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+# About The Site
 
-It makes use of a variety of open source projects including:
+> My personal blog, welcome to exchange your thought/give me any feedback!
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+# About Me
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+- 🧑‍💻 A full-time programmer.
+- ✨ Specialize in Machine Learning/Machine Vision/Full Stack Development.
+- 💻 Most of the time working on terminal.
+- 📝 A VIM/NVIM user with more than 3 years.
+- 🃏 Love Cardistry.
