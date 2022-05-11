@@ -211,7 +211,7 @@ note that I dig into PowerShell and Windows.</p>
 </span></span></code></pre></div></li>
 </ol>
 <blockquote>
-<p>❗If return is false meaning there is NO profile found then jump to step 2. <!-- raw HTML omitted -->
+<p>❗If return is false meaning there is NO profile found then jump to step 2. <br>
 ❗If return is true meaning there IS profile found then jump to step 3.</p>
 </blockquote>
 <ol start="2">
@@ -420,7 +420,7 @@ immediately</li>
 <ul>
 <li><code>document.querySelector(#myid);</code>: select by ID</li>
 <li><code>document.querySelector(.myclass);</code>: select by CSS class name</li>
-<li><code>document.querySelector(&quot;p.example&quot;);</code>: Get the first <!-- raw HTML omitted --> element in the document with class=&ldquo;example&rdquo;</li>
+<li><code>document.querySelector(&quot;p.example&quot;);</code>: Get the first <p> element in the document with class=&ldquo;example&rdquo;</li>
 </ul>
 </li>
 <li><code>document.querySelectorAll()</code>: a list of the document&rsquo;s elements that match the specified group of selectors.</li>
