@@ -68,7 +68,8 @@ module.exports = { style: { postcss: { plugins: [require(&amp;#34;tailwindcss&am
 Install VcXsrv.
 Install PyQT
 Add following to shellrc
-export DISPLAY=`grep -oP &amp;#34;(?&amp;lt;=nameserver ).+&amp;#34; /etc/resolv.conf`:0.0 Open win firewall by: Windows Security -&amp;gt; Firewall &amp;amp; network protection -&amp;gt; Allow an app through firewall -&amp;gt; make sure VcXsrv has both public and private checked. (When Launching xlaunch first time, you might get a prompt to allow through firewall.
+export DISPLAY=`grep -oP &amp;#34;(?&amp;lt;=nameserver ).+&amp;#34; /etc/resolv.conf`:0.0 Open win firewall by:
+Windows Security -&amp;gt; Firewall &amp;amp; network protection -&amp;gt; Allow an app through firewall -&amp;gt; make sure VcXsrv has both public and private checked. (When Launching xlaunch first time, you might get a prompt to allow through firewall.
 Launch XLaunch with &amp;ldquo;Disable access control&amp;rdquo; ticked</description><content type="html"><![CDATA[<p>TL;DR</p>
 <ol>
 <li>
@@ -82,7 +83,7 @@ Launch XLaunch with &amp;ldquo;Disable access control&amp;rdquo; ticked</descrip
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export DISPLAY<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>grep -oP <span style="color:#e6db74">&#34;(?&lt;=nameserver ).+&#34;</span> /etc/resolv.conf<span style="color:#e6db74">`</span>:0.0
 </span></span></code></pre></div></li>
 <li>
-<p>Open win firewall by:
+<p>Open win firewall by:<br>
 Windows Security -&gt; Firewall &amp; network protection -&gt; Allow an app through firewall -&gt; make sure VcXsrv has both public and private checked. (When Launching xlaunch first time, you might get a prompt to allow through firewall.</p>
 </li>
 <li>
@@ -93,10 +94,11 @@ Windows Security -&gt; Firewall &amp; network protection -&gt; Allow an app thro
 <ul>
 <li><a href="https://stackoverflow.com/questions/43397162/show-matplotlib-plots-and-other-gui-in-ubuntu-wsl1-wsl2">Show matplotlib plots (and other GUI) in Ubuntu (WSL1 &amp; WSL2)</a></li>
 </ul>
-]]></content></item><item><title>npm global installed path config</title><link>https://wesleych3n.github.io/posts/2021-10-18-npm-config/</link><pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-18-npm-config/</guid><description>In order to fix Error: EACCES: permission denied, access '/usr/lib/node_modules', a solution will be set installed path non-root. Here&amp;rsquo;s how to set it.
+]]></content></item><item><title>npm global installed path config</title><link>https://wesleych3n.github.io/posts/2021-10-18-npm-config/</link><pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-18-npm-config/</guid><description>In order to fix Error: EACCES: permission denied, access '/usr/lib/node_modules',
+a solution will be set installed path non-root. Here&amp;rsquo;s how to set it.
 mkdir ~/.npm-global npm config set prefix &amp;#39;~/.npm-global&amp;#39; This can see if config set properly
 npm config list Output will be like this
-; cli configs metrics-registry = &amp;#34;https://registry.npmjs.org/&amp;#34; scope = &amp;#34;&amp;#34; user-agent = &amp;#34;npm/6.14.15 node/v14.18.1 linux x64&amp;#34; ; userconfig /home/wesley/.npmrc prefix = &amp;#34;/home/wesley/.npm-global&amp;#34; ; node bin location = /usr/local/bin/node ; cwd = /mnt/c/Users/Wesley/GitHub/wesleych3n.</description><content type="html"><![CDATA[<p>In order to fix <code>Error: EACCES: permission denied, access '/usr/lib/node_modules'</code>,
+; cli configs metrics-registry = &amp;#34;https://registry.npmjs.org/&amp;#34; scope = &amp;#34;&amp;#34; user-agent = &amp;#34;npm/6.14.15 node/v14.18.1 linux x64&amp;#34; ; userconfig /home/wesley/.npmrc prefix = &amp;#34;/home/wesley/.npm-global&amp;#34; ; node bin location = /usr/local/bin/node ; cwd = /mnt/c/Users/Wesley/GitHub/wesleych3n.</description><content type="html"><![CDATA[<p>In order to fix <code>Error: EACCES: permission denied, access '/usr/lib/node_modules'</code>,<br>
 a solution will be set installed path non-root. Here&rsquo;s how to set it.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir ~/.npm-global
 </span></span><span style="display:flex;"><span>npm config set prefix <span style="color:#e6db74">&#39;~/.npm-global&#39;</span>
@@ -178,15 +180,18 @@ Import import { Hello, Goodbye } from &amp;#34;./Greetings&amp;#34; // or import
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
 </span></span><span style="display:flex;"><span>  )
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>]]></content></item><item><title>SSH X server on Windows</title><link>https://wesleych3n.github.io/posts/2021-10-14-window-x-server/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-14-window-x-server/</guid><description>Installation Install VcXsrv scoop install vcxsrv Setup xLauncher xlaunch.exe ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-1.jpg){: .align-center} ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-2.jpg){: .align-center} ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-3.jpg){: .align-center} ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-4.jpg){: .align-center}
+</span></span></code></pre></div>]]></content></item><item><title>SSH X server on Windows</title><link>https://wesleych3n.github.io/posts/2021-10-14-window-x-server/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-14-window-x-server/</guid><description>Installation Install VcXsrv scoop install vcxsrv Setup xLauncher xlaunch.exe ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-1.jpg){: .align-center}
+![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-2.jpg){: .align-center}
+![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-3.jpg){: .align-center}
+![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-4.jpg){: .align-center}
 Add env variable to PowerShell PROFILE # vi $PROFILE, and add below line $env:DISPLAY=&amp;#39;localhost:0.0&amp;#39; Test out and finish! ssh -Y server xclock</description><content type="html"><![CDATA[<h1 id="installation">Installation</h1>
 <h2 id="install-vcxsrv">Install VcXsrv</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>scoop install vcxsrv
 </span></span></code></pre></div><h2 id="setup-xlauncher">Setup xLauncher</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>xlaunch.exe
-</span></span></code></pre></div><p>![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-1.jpg){: .align-center}
-![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-2.jpg){: .align-center}
-![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-3.jpg){: .align-center}
+</span></span></code></pre></div><p>![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-1.jpg){: .align-center}<br>
+![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-2.jpg){: .align-center}<br>
+![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-3.jpg){: .align-center}<br>
 ![xlaunch-1]({{ site.url }}{{ site.baseurl }}/assets/images/xlauch-4.jpg){: .align-center}</p>
 <h2 id="add-env-variable-to-powershell-profile">Add env variable to PowerShell PROFILE</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># vi $PROFILE, and add below line</span>
@@ -195,12 +200,16 @@ Add env variable to PowerShell PROFILE # vi $PROFILE, and add below line $env:DI
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>ssh -Y server
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xclock
 </span></span></code></pre></div>]]></content></item><item><title>My Bash/Zsh-like PowerShell Journey</title><link>https://wesleych3n.github.io/posts/2021-10-14-my-powershell/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-14-my-powershell/</guid><description>TL;DR
-This is a note that I found out Microsoft PowerShell can act like Bash/Zsh which I much familiar with. Because of the work, pretty much whole operating system move to windows. It is so much pain to work without using any shell. The main reason is that I so much used to use (neo)vim as my code editor. But luckily (neo)vim built for windows (phew~). Ok, back to the title, this is a step by step note that I dig into PowerShell and Windows.</description><content type="html"><![CDATA[<p><strong>TL;DR</strong></p>
-<p>This is a note that I found out Microsoft PowerShell can act like Bash/Zsh which
+This is a note that I found out Microsoft PowerShell can act like Bash/Zsh which
 I much familiar with. Because of the work, pretty much whole operating system
 move to windows. It is so much pain to work without using any shell. The main
 reason is that I so much used to use (neo)vim as my code editor. But luckily
-(neo)vim built for windows (phew~). Ok, back to the title, this is a step by step
+(neo)vim built for windows (phew~). Ok, back to the title, this is a step by step</description><content type="html"><![CDATA[<p><strong>TL;DR</strong></p>
+<p>This is a note that I found out Microsoft PowerShell can act like Bash/Zsh which<br>
+I much familiar with. Because of the work, pretty much whole operating system<br>
+move to windows. It is so much pain to work without using any shell. The main<br>
+reason is that I so much used to use (neo)vim as my code editor. But luckily<br>
+(neo)vim built for windows (phew~). Ok, back to the title, this is a step by step<br>
 note that I dig into PowerShell and Windows.</p>
 <ul>
 <li>
@@ -211,7 +220,7 @@ note that I dig into PowerShell and Windows.</p>
 </span></span></code></pre></div></li>
 </ol>
 <blockquote>
-<p>❗If return is false meaning there is NO profile found then jump to step 2. <br>
+<p>❗If return is false meaning there is NO profile found then jump to step 2. <br><br>
 ❗If return is true meaning there IS profile found then jump to step 3.</p>
 </blockquote>
 <ol start="2">
@@ -315,14 +324,15 @@ JSX component lifecycle</description><content type="html"><![CDATA[<p>React is c
 <li><a href="https://medium.com/@jamzi/building-desktop-applications-with-electron-electron-builder-47484193cbcc">Building desktop applications with Electron - electron-builder</a></li>
 <li><a href="https://developercommunity.visualstudio.com/t/x64-developer-powershell-for-vs-2019/943058">x64 Developer PowerShell for VS 2019</a></li>
 </ul>
-]]></content></item><item><title>JavaScript Learning Note</title><link>https://wesleych3n.github.io/posts/2021-10-13-post-js-road/</link><pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-13-post-js-road/</guid><description>JavaScript Note 5 type Undefined Null String Boolen Number Others r Object 3 way create Object Object literal var a = { name:&amp;#39;Wesley&amp;#39;, score: 100 }; new operator var a = new Date Constructor function function Student(name, score){ this.name = name this.score = score } var a = new Student(&amp;#39;Wesley&amp;#39;, 100); Primitive variable assignment makes a &amp;ldquo;copy&amp;rdquo; Object variable assignment pass the &amp;ldquo;reference&amp;rdquo; Function can be anonymous // recommended var add = function(a, b) { return a + b; }; Return a function var f = function(s) { return s?</description><content type="html"><![CDATA[<h2 id="javascript-note">JavaScript Note</h2>
+]]></content></item><item><title>JavaScript Learning Note</title><link>https://wesleych3n.github.io/posts/2021-10-13-post-js-road/</link><pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate><guid>https://wesleych3n.github.io/posts/2021-10-13-post-js-road/</guid><description>JavaScript Note 5 type Undefined Null String Boolen Number
+Others r Object 3 way create Object Object literal var a = { name:&amp;#39;Wesley&amp;#39;, score: 100 }; new operator var a = new Date Constructor function function Student(name, score){ this.name = name this.score = score } var a = new Student(&amp;#39;Wesley&amp;#39;, 100); Primitive variable assignment makes a &amp;ldquo;copy&amp;rdquo; Object variable assignment pass the &amp;ldquo;reference&amp;rdquo; Function can be anonymous // recommended var add = function(a, b) { return a + b; }; Return a function var f = function(s) { return s?</description><content type="html"><![CDATA[<h2 id="javascript-note">JavaScript Note</h2>
 <h2 id="5-type">5 type</h2>
 <ul>
 <li>Undefined</li>
 <li>Null</li>
 <li>String</li>
 <li>Boolen</li>
-<li>Number
+<li>Number<br>
 Others r <code>Object</code></li>
 </ul>
 <h2 id="3-way-create-object">3 way create <code>Object</code></h2>
@@ -359,8 +369,8 @@ Others r <code>Object</code></li>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(<span style="color:#66d9ef">true</span>); <span style="color:#a6e22e">f1</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(<span style="color:#66d9ef">false</span>); <span style="color:#a6e22e">f2</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>);
 </span></span></code></pre></div><ul>
-<li>When a function is used only once, we can
-declare it anonymously and evoke it
+<li>When a function is used only once, we can<br>
+declare it anonymously and evoke it<br>
 immediately</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>(<span style="color:#66d9ef">function</span>() {

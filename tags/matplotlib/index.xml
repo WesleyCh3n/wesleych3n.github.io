@@ -2,5 +2,6 @@
 Install VcXsrv.
 Install PyQT
 Add following to shellrc
-export DISPLAY=`grep -oP &amp;#34;(?&amp;lt;=nameserver ).+&amp;#34; /etc/resolv.conf`:0.0 Open win firewall by: Windows Security -&amp;gt; Firewall &amp;amp; network protection -&amp;gt; Allow an app through firewall -&amp;gt; make sure VcXsrv has both public and private checked. (When Launching xlaunch first time, you might get a prompt to allow through firewall.
+export DISPLAY=`grep -oP &amp;#34;(?&amp;lt;=nameserver ).+&amp;#34; /etc/resolv.conf`:0.0 Open win firewall by:
+Windows Security -&amp;gt; Firewall &amp;amp; network protection -&amp;gt; Allow an app through firewall -&amp;gt; make sure VcXsrv has both public and private checked. (When Launching xlaunch first time, you might get a prompt to allow through firewall.
 Launch XLaunch with &amp;ldquo;Disable access control&amp;rdquo; ticked</description></item></channel></rss>
