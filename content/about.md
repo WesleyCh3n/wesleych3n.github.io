@@ -7,8 +7,7 @@ author:
   name: WesleyCh3n
 ---
 
-{{ $image := resources.GetRemote "https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" }}
-{{ $image := $image.Resize "100" }}
+{{< img src="https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" >}}
 <img src="{{ $image.RelPermalink }}">
 
 <img src="https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" width="100"/>
