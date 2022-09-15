@@ -3,8 +3,8 @@ date: "2022-05-11"
 aliases:
   - about-me
   - contact
-author:
-  name: WesleyCh3n
+showToc: false
+
 ---
 
 {{<figure src="https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" class="float: center" width="150">}}
@@ -21,6 +21,6 @@ author:
 
 ### 📦 About the Site
 
-> My personal blog,
->
-> Welcome to exchange your thoughts / give me any feedback!
+My personal blog,
+
+Welcome to exchange your thoughts / give me any feedback!

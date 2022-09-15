@@ -14,8 +14,6 @@ header:
 
 ---
 
-# Name Export vs Default Export
-
 ## Name Export
 
 - Export
