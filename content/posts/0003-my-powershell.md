@@ -23,20 +23,20 @@ note that I dig into PowerShell and Windows.
 - Create `$PROFILE` for PowerShell if not exist (like `.bashrc` or `.zshrc`)
 
     1. Test if Profile exist
-        ```powershell
+        ```ps1
         Test-Path $PROFILE
         ```
     > ❗If return is false meaning there is NO profile found then jump to step 2. <br>
     > ❗If return is true meaning there IS profile found then jump to step 3.
 
     2. Create Profile
-        ```powershell
+        ```ps1
         New-Item -Type File -Force $PROFILE
         ```
     > ⚠ (Caution) these will erase the exist profile with new empty one.
 
     3. Varify Profile path
-        ```powershell
+        ```ps1
         echo $PROFILE
         ```
     It normally locate in `~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1`
@@ -44,35 +44,35 @@ note that I dig into PowerShell and Windows.
 - Install `oh-my-posh` Theme like powerlevel10k
 
     1. Installation
-        ```powershell
+        ```ps1
         Install-Module oh-my-posh -Scope CurrentUser
         ```
 
     2. List all themes and remember the name of theme you like
-        ```powershell
+        ```ps1
         Get-PoshThemes -list
         ```
 
     3. Add theme to Profile
-        ```powershell
+        ```ps1
         Set-PoshPrompt -Theme <Theme name>
         ```
     Personally I use `honukai` for the simplicity.
 
     4. Source the Profile or restart the Terminal to take effect.
-        ```powershell
+        ```ps1
         . $PROFILE
         ```
 
 - Install Autosuggestion
 
     1. Installation
-        ```powershell
+        ```ps1
         Install-Module PSReadLine
         ```
 
     2. Add the following configurations
-        ```powershell
+        ```ps1
         # autocompletion
         Import-Module PSReadLine
         Set-PSReadLineOption -PredictionSource History

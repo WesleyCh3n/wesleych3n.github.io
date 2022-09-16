@@ -4,10 +4,11 @@ aliases:
   - about-me
   - contact
 showToc: false
+disableShare: true
 
 ---
 
-{{<figure src="https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" class="float: center" width="150">}}
+{{<figure src="https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" align=center width="150">}}
 
 ### 🧑‍💻 About Me
 

@@ -45,7 +45,7 @@ prefix = "/home/wesley/.npm-global"
 ; "npm config ls -l" to show all defaults.
 ```
 
-Add bin path to $PATH variable
+Add bin path to `$PATH` variable
 
 ```bash
 if [ -d $HOME/.npm-global ]; then

@@ -36,7 +36,7 @@ params:
   profileMode:
     enabled: true
     title: Wesley Chen
-    subtitle: "Software engineer"
+    subtitle: "Software engineer, Machine Vision, Machine Learning"
     imageUrl: "img/bio-photo.jpg"
     imageWidth: 120
     imageHeight: 120
@@ -47,12 +47,12 @@ params:
       - name: Posts
         url: posts
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/WesleyCh3n"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/wesleych3n"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/16102997/wesleych3n"
   assets:
     disableHLJS: false
 
@@ -73,6 +73,12 @@ menu:
     - identifier: "search"
       name: "Search"
       url: "/search"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
 
 markup:
   highlight:
