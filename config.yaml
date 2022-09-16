@@ -17,10 +17,10 @@ params:
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
+  ShowRssButtonInSectionTermList: false
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
@@ -30,9 +30,6 @@ params:
   showtoc: true
   tocopen: false
 
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
   profileMode:
     enabled: true
     title: Wesley Chen
@@ -41,11 +38,11 @@ params:
     imageWidth: 120
     imageHeight: 120
     imageTitle: Portrait
-    buttons:
-      - name: About
-        url: about
-      - name: Posts
-        url: posts
+    # buttons:
+    #   - name: About
+    #     url: about
+    #   - name: Posts
+    #     url: posts
   socialIcons:
     - name: github
       url: "https://github.com/WesleyCh3n"

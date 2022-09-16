@@ -1,4 +1,5 @@
 ---
+title: About me
 date: "2022-05-11"
 aliases:
   - about-me
@@ -6,12 +7,13 @@ aliases:
 showToc: false
 disableShare: true
 searchHidden: true
+ShowReadingTime: false
+ShowPostNavLinks: false
+ShowWordCount: false
 
 ---
 
 {{<figure src="https://user-images.githubusercontent.com/30611421/167780325-7b20e4df-1837-4dbe-adc3-14473c5b6d58.png" align=center width="150">}}
-
-### 🧑‍💻 About Me
 
 - 🧑‍💻 A full-time programmer.
 - ✨ Specialize in Machine Learning/Machine Vision/Full Stack Development.
