@@ -5,6 +5,7 @@ aliases:
   - contact
 showToc: false
 disableShare: true
+searchHidden: true
 
 ---
 
